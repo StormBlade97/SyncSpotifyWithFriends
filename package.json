@@ -14,5 +14,8 @@
     "node-fetch": "^2.1.2",
     "spotify-web-api-node": "^3.0.0",
     "ws": "^5.1.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.7.4"
   }
 }
