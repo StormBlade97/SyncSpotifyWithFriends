@@ -12,19 +12,23 @@ class SpotifyUserAPI {
         this.ACCESS_TOKEN = accessToken;
         this.REFRESH_TOKEN = refreshToken;
         this.HEADERS = {
-            'Accept': 'application/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${accessToken}`,
+            Authorization: `Bearer ${accessToken}`,
         };
     }
 
     async getProfile() {
-        const data = await fetch('https://api.spotify.com/v1/me', { headers: this.HEADERS });
+        const data = await fetch('https://api.spotify.com/v1/me', {
+            headers: this.HEADERS,
+        });
         return data.json();
     }
 
     async getPlayer() {
-        const data = await fetch('https://api.spotify.com/v1/me/player', { headers: this.HEADERS });
+        const data = await fetch('https://api.spotify.com/v1/me/player', {
+            headers: this.HEADERS,
+        });
         return data.json();
     }
 
