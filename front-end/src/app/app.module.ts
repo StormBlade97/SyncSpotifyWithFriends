@@ -9,6 +9,7 @@ import { JoinRoomComponent } from './join-room/join-room.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RoomComponent } from './room/room.component';
 import { SongArtComponent } from './song-art/song-art.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SongArtComponent } from './song-art/song-art.component';
     EnterRoomComponent,
     RoomComponent,
     SongArtComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

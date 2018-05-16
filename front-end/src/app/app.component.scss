@@ -3,3 +3,8 @@
 :host {
     background: linear-gradient(to bottom, $color-palette-gradient-1 0%, $color-palette-gradient-2);
 }
+
+.content-area {
+    width: 600px;
+    margin: 0 auto;
+}
