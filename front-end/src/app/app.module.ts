@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RoomComponent } from './room/room.component';
 import { SongArtComponent } from './song-art/song-art.component';
 import { TitleComponent } from './title/title.component';
+import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TitleComponent } from './title/title.component';
     RoomComponent,
     SongArtComponent,
     TitleComponent,
+    UserThumbnailComponent,
   ],
   imports: [
     BrowserModule,
