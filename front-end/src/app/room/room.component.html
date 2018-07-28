@@ -2,11 +2,10 @@
 
 <app-song-art></app-song-art>
 
-<div class="box is-medium">
-  <app-user-thumbnail></app-user-thumbnail>
-  Person Name <br/>
-  is hosting the song
-</div>
+<app-host-info></app-host-info>
+
+<app-room-users [users]="users"></app-room-users>
+
 <div>
   <a class="button" routerLink='/join'>Leave Room</a>
 </div>

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
 
+  users = [{ name: 'bob' }, { name: 'judy' }];
+
   constructor() { }
 
   ngOnInit() {

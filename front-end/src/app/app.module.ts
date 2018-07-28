@@ -11,6 +11,8 @@ import { RoomComponent } from './room/room.component';
 import { SongArtComponent } from './song-art/song-art.component';
 import { TitleComponent } from './title/title.component';
 import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.component';
+import { HostInfoComponent } from './host-info/host-info.component';
+import { RoomUsersComponent } from './room-users/room-users.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.componen
     SongArtComponent,
     TitleComponent,
     UserThumbnailComponent,
+    HostInfoComponent,
+    RoomUsersComponent,
   ],
   imports: [
     BrowserModule,
