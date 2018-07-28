@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-host-info',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HostInfoComponent implements OnInit {
 
-  host = { };
+  @Input() host;
 
   constructor() { }
 
