@@ -1,0 +1,43 @@
+.now-playing-widget {
+    border-radius: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 0;
+
+    .album-cover {
+        width: 100%;
+        min-width: 10rem;
+        min-height: 10rem;
+        height: 100%;
+    }
+    .column {
+        padding: 0;
+        min-height: 5rem;
+    }
+}
+.flex-column {
+    display: flex;
+}
+.flex-centerized {
+    display: inline;
+    margin: auto;
+    padding: 2rem;
+}
+
+.as-image {
+    background-image: url('https://www.designformusic.com/wp-content/uploads/2015/10/insurgency-digital-album-cover-design.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.join-button {
+    align-items: center;
+    justify-content: center;
+
+    & button,
+    a {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
