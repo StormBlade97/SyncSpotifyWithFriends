@@ -26,3 +26,11 @@ $body-size: 14px;
         padding-bottom: 0;
     }
 }
+
+.glow {
+    box-shadow: 0 0 12px $primary;
+}
+.text-glow {
+    text-shadow: 0 0 6px $primary;
+    color: $primary;
+}
