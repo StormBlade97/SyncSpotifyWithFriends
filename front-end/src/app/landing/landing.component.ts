@@ -1,25 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { interval, BehaviorSubject } from 'rxjs';
-import { take, map, finalize } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { interval } from 'rxjs';
+import { take, scan, finalize, startWith } from 'rxjs/operators';
 
 @Component({
     selector: 'app-landing',
     templateUrl: './landing.component.html',
     styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent {
     redirecting = {
         value: false,
     };
-    _source$ = interval(1000).pipe(take(5));
-    timer$ = new BehaviorSubject(0).pipe(
-        map((v) => 5 - v),
+    timer$ = interval(1000).pipe(
+        startWith(0),
+        take(5),
+        scan((num) => num - 1, 5),
         finalize(() => {
-            window.location.assign('https://google.fi');
+            console.log('HELLO');
         })
     );
-
-    ngOnInit() {
-        const subSource = this._source$.subscribe(this.timer$);
-    }
 }

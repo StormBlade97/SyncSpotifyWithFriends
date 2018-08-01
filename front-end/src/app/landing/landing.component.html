@@ -1,6 +1,6 @@
 <div class="hero is-fullheight">
   <div class="hero-body">
-    <div class="container">
+    <div class="container landing-container">
       <app-title></app-title>
       <app-join-room *ngIf="!redirecting.value; else redirectView" [redirecting]="redirecting"></app-join-room>
       <ng-template #redirectView>

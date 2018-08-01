@@ -9,10 +9,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RoomComponent } from './room/room.component';
 import { SongArtComponent } from './song-art/song-art.component';
 import { TitleComponent } from './title/title.component';
-import { UserThumbnailComponent } from './user-thumbnail/user-thumbnail.component';
 import { HostInfoComponent } from './host-info/host-info.component';
 import { RoomUsersComponent } from './room-users/room-users.component';
 import { LandingComponent } from './landing/landing.component';
+import { TitleBarComponent } from './room/title-bar/title-bar.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
     declarations: [
@@ -23,13 +24,13 @@ import { LandingComponent } from './landing/landing.component';
         RoomComponent,
         SongArtComponent,
         TitleComponent,
-        UserThumbnailComponent,
         HostInfoComponent,
         RoomUsersComponent,
         LandingComponent,
+        TitleBarComponent,
     ],
     imports: [BrowserModule, HttpClientModule, AppRoutingModule],
-    providers: [],
+    providers: [UserService],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

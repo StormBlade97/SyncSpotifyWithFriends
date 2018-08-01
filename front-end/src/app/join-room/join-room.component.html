@@ -1,13 +1,13 @@
 <div class="padding-box small only-vertical">
   <div class="columns is-mobile now-playing-widget">
     <div class="column">
-      <div class="as-image album-cover"></div>
+      <img [src]="songService.currentlyPlayingSong.albumCover" alt="albumCover" class="as-image album-cover" />
     </div>
     <div class="column is-flex is-three-fifths">
       <div class="flex-centerized has-text-centered-mobile">
-        <span class="subtitle is-5 has-text-white">Insurgency</span>
+        <span class="subtitle is-5 has-text-white">{{ songService.currentlyPlayingSong.title }}</span>
         <br/>
-        <span class="is-size-6">Some artist</span>
+        <span class="is-size-6">{{ songService.currentlyPlayingSong.artist }}</span>
       </div>
     </div>
   </div>

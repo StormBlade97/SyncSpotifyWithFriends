@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SongServiceService } from '../services/song-service.service';
 
 @Component({
     selector: 'app-join-room',
@@ -7,12 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class JoinRoomComponent implements OnInit {
     @Input() redirecting;
-    constructor() {}
+    constructor(public songService: SongServiceService) {}
 
     ngOnInit() {}
 
     switchToRedirectingView = (event$) => {
-        console.log(event$.target);
         this.redirecting.value = true;
     };
 }

@@ -1,12 +1,17 @@
-<div class="hero is-full-height">
-  <div class="hero-body">
-    <app-song-art></app-song-art>
+<div class="hero is-fullheight">
+  <div class="hero-body room-container">
+    <div class="columns is-desktop room-container-grid">
+      <div class="column is-two-thirds">
+        <app-song-art></app-song-art>
+      </div>
+      <div class="column room-info">
+        <app-host-info [host]="host"></app-host-info>
+        <app-room-users [users]="participants"></app-room-users>
 
-    <app-host-info [host]="users[0]"></app-host-info>
-    <app-room-users [users]="users"></app-room-users>
-
-    <div>
-      <a class="button" routerLink='/join'>Leave Room</a>
+        <button class="button is-outlined is-danger room-control-button custom-card has-text-weight-bold is-uppercase" routerLink='/landing'>
+          Leave room
+        </button>
+      </div>
     </div>
   </div>
 </div>

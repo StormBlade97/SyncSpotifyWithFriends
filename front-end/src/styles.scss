@@ -28,9 +28,21 @@ $body-size: 14px;
 }
 
 .glow {
-    box-shadow: 0 0 12px $primary;
+    box-shadow: 0 0 50px $primary;
 }
 .text-glow {
     text-shadow: 0 0 6px $primary;
     color: $primary;
+}
+
+.title {
+    &.alternative {
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+.custom-card {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
 }
