@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.host-card {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    & div.aligner {
+        display: flex;
+        & > :first-child {
+            margin-right: 2rem;
+        }
+        .avatar {
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+        }
+        .host-info {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}

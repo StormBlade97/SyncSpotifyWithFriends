@@ -1,22 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+@import 'src/assets/normalizer.css';
+@import 'theme';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+$family-sans-serif: 'Open Sans', sans-serif;
+$primary: $neon-green;
+$font-size-mobile: 14px;
+$body-background-color: $background;
+$body-size: 14px;
 
 @import 'node_modules/bulma/bulma.sass';
-@import 'theme';
 
-html,
-body,
-app-root {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.padding-box {
+    padding: 2rem 3rem;
+    &.small {
+        padding: 1rem 1.5rem;
+    }
+    &.only-vertical {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &.only-horizontal {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
-html {
-    font-size: 14px;
+.glow {
+    box-shadow: 0 0 50px $primary;
+}
+.text-glow {
+    text-shadow: 0 0 6px $primary;
+    color: $primary;
 }
 
-body {
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    display: flex;
+.title {
+    &.alternative {
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+.custom-card {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
 }

@@ -1,0 +1,14 @@
+<div class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container landing-container">
+      <app-title></app-title>
+      <app-join-room *ngIf="!redirecting.value; else redirectView" [redirecting]="redirecting"></app-join-room>
+      <ng-template #redirectView>
+        <p class="has-text-white padding-box only-vertical">
+          We will ask you for your permission to control your Spotify playback. Taking you there in
+          <span class="text-glow has-text-weight-bold">{{ timer$ | async }}</span> seconds
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.user-card {
+    padding: 1rem 2rem;
+}
+
+.user-list {
+    margin-top: 0.5rem;
+    & .avatar {
+        display: inline-block;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 4px;
+    }
+}

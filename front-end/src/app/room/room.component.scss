@@ -1,0 +1,26 @@
+.room-container {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+.room-container-grid {
+    width: 100%;
+    height: 100%;
+    .column {
+        margin: 2rem;
+    }
+}
+.room-info {
+    & * {
+        margin-top: 0.8rem;
+    }
+}
+.room-control-button {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

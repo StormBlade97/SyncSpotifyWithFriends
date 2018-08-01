@@ -1,9 +1,9 @@
-<div class="box media is-medium">
-  <app-user-thumbnail class="media-left" user="host"></app-user-thumbnail>
-  <div class="media-content">
-    <div class="content">
-      {{host.name}}<br/>
-      is hosting this song
-    </div>
+<div class="host-card custom-card">
+  <div class="aligner">
+    <img [src]="host.avatar" alt="host-avatar" class="avatar has-background-primary" />
+  </div>
+  <div class="host-info">
+    <h4 class="title alternative is-5 is-capitalized has-text-primary is-marginless">{{host.name}}</h4>
+    <span class="has-text-white">is hosting this song</span>
   </div>
 </div>

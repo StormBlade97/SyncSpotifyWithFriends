@@ -1,1 +1,8 @@
-<app-user-thumbnail *ngFor="let user of users" [user]="user"></app-user-thumbnail>
+<div class="custom-card user-card">
+    <p class="has-text-white user-list-label">
+        <span [innerText]="getThreeFirstUserNames()"></span>
+        <span class="has-text-primary " *ngIf="users.length> 3"> and {{ getNumberOfParticipants() }} others</span> are following…</p>
+    <div class="user-list">
+        <img [src]="user.avatar" class="avatar has-background-primary" *ngFor="let user of users" />
+    </div>
+</div>
