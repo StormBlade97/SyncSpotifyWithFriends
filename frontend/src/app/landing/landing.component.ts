@@ -16,7 +16,7 @@ export class LandingComponent {
         take(5),
         scan((num) => num - 1, 5),
         finalize(() => {
-            console.log('HELLO');
+            window.location.assign(`${window.location.protocol}/${window.location.host}`);
         })
     );
 }
