@@ -4,7 +4,7 @@ const app = express();
 const server = http.createServer(app);
 require('dotenv').config();
 
-const routes = require('./routes');
+const routes = require('./src/routes/routes');
 app.use(routes);
 
 server.listen(4000, () => {
@@ -12,6 +12,6 @@ server.listen(4000, () => {
 });
 
 // run poller
-require('./poller')();
+require('./src/poller')();
 
 module.exports = server;

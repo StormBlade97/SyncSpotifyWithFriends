@@ -1,12 +1,20 @@
-const SpotifyUserAPI = require('../spotify-api/spotifyApi');
+const SpotifyUserAPI = require('./spotify-api/UserApi');
 
-// UserStore is a singleton to provide data about users in "the room"
-class UserStore {
+// RoomStore is an abstraction to provide data about users in "the room"
+class RoomStore {
     constructor() {
         this.participants = [];
     }
 
-    createUser = async (accessToken, refreshToken) => {
+    getParticapants() {
+        return [...this.participants];
+    }
+
+    getHost() {
+        return this.participants[0];
+    }
+
+    async addParticipant (accessToken, refreshToken) {
         // if there is a user in the store, throw Error
         if (this.participants.find((p) => p.accessToken === accessToken))
             throw new Error('This user already exist');
@@ -27,7 +35,7 @@ class UserStore {
         return user;
     };
 
-    removeUser(accessToken) {
+    removeParticipant(accessToken) {
         // look up user by access token. If user is found, remove, otherwise do nothing
         const foundIndex = this.participants.findIndex((p) => p.accessToken === accessToken);
         if (foundIndex > -1) {
@@ -37,3 +45,6 @@ class UserStore {
         }
     }
 }
+
+// In the future, RoomStore shouldn't need to be a singleton to have multiple rooms
+module.exports = new RoomStore();

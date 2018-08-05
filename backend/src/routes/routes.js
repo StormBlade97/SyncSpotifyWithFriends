@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const fetch = require('node-fetch');
-const userStore = require('./userStore');
+const RoomStore = require('../RoomStore');
 const URLSearchParams = require('url').URLSearchParams;
-const apiHelper = require('../spotify-api/api-helpers');
+const apiHelper = require('../spotify-api/ApiHelpers');
 
 const REDIRECT_URI = `${process.env.APP_HOST_LOCATION}/loggedin`;
 
@@ -28,7 +28,7 @@ router.get('/loggedin', async (req, res) => {
         });
         const responseData = await responseJson.json();
         // if success, register this user into the store
-        userStore.createUser(responseData.access_token, responseData.refresh_token); // TODO worry about expires_in
+        RoomStore.addParticipant(responseData.access_token, responseData.refresh_token); // TODO worry about expires_in
     } catch (e) {
         // if failed to get token or cannot register user, log the error
         console.error(e);
@@ -39,7 +39,7 @@ router.get('/loggedin', async (req, res) => {
 
 router.get('/logout', async (req, res) => {
     try {
-        await userStore.removeUser(req.query.code);
+        await RoomStore.removeParticipant(req.query.code);
         res.send('Logged out');
     } catch (error) {
         console.error(error);

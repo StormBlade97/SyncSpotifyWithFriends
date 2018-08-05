@@ -1,11 +1,12 @@
-const store = require('./userStore');
-const SpotifyUserApi = require('./spotifyApi');
+const store = require('./RoomStore');
+const SpotifyUserApi = require('./spotify-api/UserApi');
 
 module.exports = () => {
     let hostPaused;
 
     const pollHostPlayerStatus = async () => {
-        if (store.getUserStore().length < 1) return;
+        if (store.getParticapants().length < 1) return;
+        
         const host = store.getHost();
         const API = new SpotifyUserApi(host.accessToken, host.refreshToken);
         const player = await API.getPlayer();
