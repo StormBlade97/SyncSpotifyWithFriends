@@ -14,5 +14,5 @@ export class JoinRoomComponent implements OnInit {
 
     switchToRedirectingView = (event$) => {
         this.redirecting.value = true;
-    };
+    }
 }
