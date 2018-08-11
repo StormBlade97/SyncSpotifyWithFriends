@@ -1,4 +1,4 @@
-const apiHelper = require('./api-helpers.js');
+const apiHelper = require('./ApiHelpers');
 const dotenv = require('dotenv');
 
 beforeAll(() => {
