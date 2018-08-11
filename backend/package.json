@@ -4,7 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "strat": "node server.js",
+        "build-front-prod": "cd ../frontend && ng build --prod",
+        "build-front": "cd ../frontend && ng build",
+        "start-prod": "npm run build-front-prod && node server.js",
+        "start": "npm run build-front && node server.js",
         "test": "jest --watchAll"
     },
     "author": "",
