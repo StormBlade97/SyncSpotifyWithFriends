@@ -29,7 +29,7 @@ class RoomStore {
         user.name = rawProfile.display_name;
         user.email = rawProfile.email;
         user.id = rawProfile.id;
-        user.image = rawProfile.images[0];
+        user.image = rawProfile.images ? rawProfile.images[0] : '';
 
         this.participants.push(user);
         return user;

@@ -15,7 +15,7 @@ class SpotifyAPIUtilities {
         const queryParams = new URLSearchParams({
             response_type: 'code',
             client_id: process.env.CLIENT_ID,
-            scope: this.scopes.join('+'),
+            scope: this.scopes.join(' '),
             redirect_uri: `${process.env.APP_HOST_LOCATION}/loggedin`,
         });
         return process.env.SPOTIFY_AUTH_BASE_URL + '?' + queryParams.toString();
