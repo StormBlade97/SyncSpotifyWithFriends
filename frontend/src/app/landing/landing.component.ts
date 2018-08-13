@@ -16,7 +16,7 @@ export class LandingComponent {
         take(5),
         scan((num) => num - 1, 5),
         finalize(() => {
-            window.location.assign(`${window.location.protocol}/login`);
+            window.location.assign(`${window.location.protocol}/api/login`);
         })
     );
 }
