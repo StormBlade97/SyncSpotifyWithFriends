@@ -29,7 +29,7 @@ class SpotifyUserAPI {
         const data = await fetch('https://api.spotify.com/v1/me/player', {
             headers: this.HEADERS,
         });
-        return data.json();
+        return data.json().catch(e => console.error(e));
     }
 
     async syncTrack(trackUri, position_ms) {
