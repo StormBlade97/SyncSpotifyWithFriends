@@ -5,6 +5,6 @@ import * as mockUsers from './mockdata.json';
     providedIn: 'root',
 })
 export class UserService {
-    data = mockUsers;
+    data = <any>mockUsers;
     constructor() {}
 }
