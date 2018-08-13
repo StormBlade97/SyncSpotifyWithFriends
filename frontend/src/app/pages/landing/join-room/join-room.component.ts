@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SongServiceService } from '../services/song-service.service';
+import { SongServiceService } from 'src/app/services/song-service.service';
 
 @Component({
     selector: 'app-join-room',

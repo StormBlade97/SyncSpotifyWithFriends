@@ -2,17 +2,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { JoinRoomComponent } from './join-room/join-room.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { RoomComponent } from './room/room.component';
-import { SongArtComponent } from './song-art/song-art.component';
-import { TitleComponent } from './title/title.component';
-import { HostInfoComponent } from './host-info/host-info.component';
-import { RoomUsersComponent } from './room-users/room-users.component';
-import { LandingComponent } from './landing/landing.component';
-import { TitleBarComponent } from './room/title-bar/title-bar.component';
+import { RoomComponent } from './pages/room/room.component';
+import { TitleBarComponent } from './pages/room/title-bar/title-bar.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { JoinRoomComponent } from './pages/landing/join-room/join-room.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+
+import { HeaderComponent } from './components/header/header.component';
+import { SongArtComponent } from './components/song-art/song-art.component';
+import { TitleComponent } from './components/title/title.component';
+import { HostInfoComponent } from './components/host-info/host-info.component';
+import { RoomUsersComponent } from './components/room-users/room-users.component';
 import { UserService } from './services/user.service';
 
 @NgModule({

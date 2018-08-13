@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
     selector: 'app-room',

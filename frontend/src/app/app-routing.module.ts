@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingComponent } from './landing/landing.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { RoomComponent } from './room/room.component';
+import { LandingComponent } from 'src/app/pages/landing/landing.component';
+import { PageNotFoundComponent } from 'src/app/pages/page-not-found/page-not-found.component';
+import { RoomComponent } from 'src/app/pages/room/room.component';
 
 const routes: Routes = [
     { path: 'landing', component: LandingComponent },
