@@ -6,7 +6,7 @@ class RoomStore {
         this.participants = [];
     }
 
-    getParticapants() {
+    getParticipants() {
         return [...this.participants];
     }
 
