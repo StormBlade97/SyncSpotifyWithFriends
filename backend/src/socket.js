@@ -9,8 +9,11 @@ const wss = new WebSocket.Server({
 wss.on('connection', (ws, req) => {
     ws.on('message', (message) => {
         console.log("Message " + message)
-    })
-    console.log("Connected to " + req.socket.remoteAddress)
+    });
+    console.log("Connected to " + req.socket.remoteAddress);
+    ws.send(JSON.stringify({ type: '', payload: '' }));
+    ws.send(JSON.stringify({ type: '', payload: 'This is a message' }));
+    ws.send('I am an error message');
 });
 
 setTimeout(() => {

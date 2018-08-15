@@ -10,6 +10,10 @@ app.use('/api', routes);
 
 // app.use('/', express.static(path.join(__dirname, '..', 'frontend', 'dist', 'front-end')));
 
+module.exports = server;
+
+require('./src/socket');
+
 server.listen(4000, () => {
     console.log('Up and running on port 4000');
 });
@@ -17,4 +21,4 @@ server.listen(4000, () => {
 // run poller
 require('./src/poller')();
 
-module.exports = server;
+
