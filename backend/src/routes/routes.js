@@ -37,7 +37,7 @@ router.get('/loggedin', async (req, res) => {
     }
     // /app is where the front-end is hosted
     res.cookie('usertoken', accessToken);
-    res.redirect('/');
+    res.redirect('/room');
 });
 
 router.get('/logout', async (req, res) => {
