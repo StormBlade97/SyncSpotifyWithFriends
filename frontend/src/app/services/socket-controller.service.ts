@@ -56,4 +56,7 @@ export class SocketControllerService  {
     return this.socketErrors$;
   }
 
+  send(message: string) {
+    this.socket.send(message);
+  }
 }

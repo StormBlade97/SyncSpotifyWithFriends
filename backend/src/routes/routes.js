@@ -17,7 +17,7 @@ router.get('/loggedin', async (req, res) => {
         throw "Authorization code not found";
     }
 
-    let accessToken = null;
+    let user = null;
 
     try {
         const responseJson = await fetch(apiHelper.getAccessTokenURL(req.query.code), {
@@ -28,16 +28,21 @@ router.get('/loggedin', async (req, res) => {
         });
         const responseData = await responseJson.json();
         // if success, register this user into the store
-        await RoomStore.addParticipant(responseData.access_token, responseData.refresh_token); // TODO worry about expires_in
-        accessToken = responseData.access_token;
-        console.log(`User logged in with access token:\n${accessToken}`);
+        user = await RoomStore.addParticipant(responseData.access_token, responseData.refresh_token); // TODO worry about expires_in
+
+        if (user) {
+            accessToken = responseData.access_token;
+            console.log(`User logged in with access token:\n${accessToken}`);
+
+            res.redirect(`/room?token=${user.token}`);
+        } else {
+            throw "No user could be saved.";
+        }
     } catch (e) {
         // if failed to get token or cannot register user, log the error
         console.error(e);
+        throw e;
     }
-    // /app is where the front-end is hosted
-    res.cookie('usertoken', accessToken);
-    res.redirect('/room');
 });
 
 router.get('/logout', async (req, res) => {

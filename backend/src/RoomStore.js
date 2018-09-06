@@ -1,4 +1,5 @@
 const SpotifyUserAPI = require('./spotify-api/UserApi');
+const uuidv1 = require('uuid/v1');
 
 // RoomStore is an abstraction to provide data about users in "the room"
 class RoomStore {
@@ -30,6 +31,7 @@ class RoomStore {
         user.email = rawProfile.email;
         user.id = rawProfile.id;
         user.image = rawProfile.images ? rawProfile.images[0] : '';
+        user.token = uuidv1();
 
         this.participants.push(user);
         return user;
